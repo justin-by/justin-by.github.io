@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Justin Sung</title>
+</head>
+
+<body class="light" id="top">
+  <header class="header center">
+    <h3>
+      <a href="https://github.com/justin-by" class="link" target="_blank" rel="noopener noreferrer">JS.</a>
+    </h3>
+
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#skills">Skills</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
+
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <div class="about center">
+      <h1>Hi, I am <span class="about__name">Justin Sung.</span></h1>
+      <h2 class="about__role">A Front end Developer.</h2>
+      <p class="about__desc">
+        I'm a passionate Software Engineer who absolutely loves the innovation and conceptualization required in order
+        to become a great developer.
+        I have experience in building multiple full-stack web applications with JavaScript, Python, React, Flask, and
+        Express.
+      </p>
+
+      <div class="about__contact center">
+        <a href="https://docs.google.com/document/d/1aLthgbTIePLpl0uUf5jZb7TjKRZ3tbtHKYUcnTsMDW8/edit?usp=sharing"
+          target="_blank" rel="noopener noreferrer">
+          <span class="btn btn--outline">Resume</span>
+        </a>
+
+        <a href="https://github.com/justin-by" aria-label="github" class="link link--icon" target="_blank"
+          rel="noopener noreferrer">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/j-sung/" aria-label="linkedin" class="link link--icon" target="_blank"
+          rel="noopener noreferrer">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="https://angel.co/u/justin-by" aria-label="angellist" class="link link--icon" target="_blank"
+          rel="noopener noreferrer">
+          <i aria-hidden="true" class="fab fa-angellist"></i>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="projects__grid">
+        <div class="project">
+          <h3>Anilog</h3>
+          <p class="project__description">
+            A web app for discovering and categorizing anime onto a user’s personalized anime list.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Javascript</li>
+            <li class="project__stack-item">Python</li>
+            <li class="project__stack-item">Flask</li>
+            <li class="project__stack-item">React</li>
+          </ul>
+
+          <a href="https://github.com/justin-by/Anilog" aria-label="source code" class="link link--icon" target="_blank"
+            rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://anilog-proj.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
+            rel="noopener noreferrer">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>PBrain</h3>
+          <p class="project__description">
+            A programming language-oriented study application that allows users to create and study flashcards within
+            decks; a clone of Brainscape.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Javascript</li>
+            <li class="project__stack-item">Python</li>
+            <li class="project__stack-item">Flask</li>
+            <li class="project__stack-item">React</li>
+          </ul>
+
+          <a href="https://github.com/rzh150030/group_project_2_Brainscape_clone" aria-label="source code"
+            class="link link--icon" target="_blank" rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://pbrain-app.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
+            rel="noopener noreferrer">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Req.Body</h3>
+          <p class="project__description">
+            A personal application for logging workouts to display complete accomplishments and remind of incomplete
+            workouts.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Javascript</li>
+            <li class="project__stack-item">AJAX</li>
+            <li class="project__stack-item">Express</li>
+          </ul>
+
+          <a href="https://github.com/MattMores/req.body" aria-label="source code" class="link link--icon"
+            target="_blank" rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://req-body.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
+            rel="noopener noreferrer">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain">HTML</li>
+        <li class="skills__list-item btn btn--plain">CSS</li>
+        <li class="skills__list-item btn btn--plain">Javascript</li>
+        <li class="skills__list-item btn btn--plain">Python</li>
+        <li class="skills__list-item btn btn--plain">React</li>
+        <li class="skills__list-item btn btn--plain">Redux</li>
+        <li class="skills__list-item btn btn--plain">Express</li>
+        <li class="skills__list-item btn btn--plain">Flask</li>
+        <li class="skills__list-item btn btn--plain">Node.js UI</li>
+        <li class="skills__list-item btn btn--plain">Git</li>
+        <li class="skills__list-item btn btn--plain">Docker</li>
+        <li class="skills__list-item btn btn--plain">AWS</li>
+        <li class="skills__list-item btn btn--plain">SQL / Sequelize</li>
+        <li class="skills__list-item btn btn--plain">postgreSQL</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <a href="mailto:jsung.by@gmail.com">
+        <span class="btn btn--outline">Email me</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="link footer__link">
+      Thanks for reading!
+    </span>
+  </footer>
+
+  <div class="scroll-top">
+    <a aria-label="Scroll up" href="#top">
+      <i aria-hidden="true" class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
