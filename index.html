@@ -46,7 +46,7 @@
     <!-- About -->
     <div class="about center">
       <h1>Hi, I am <span class="about__name">Justin Sung.</span></h1>
-      <h2 class="about__role">A Front end Developer.</h2>
+      <h2 class="about__role">A Full-Stack Software Engineer.</h2>
       <p class="about__desc">
         I'm a passionate Software Engineer who absolutely loves the innovation and conceptualization required in order
         to become a great developer.
@@ -55,10 +55,7 @@
       </p>
 
       <div class="about__contact center">
-        <a href="https://docs.google.com/document/d/1aLthgbTIePLpl0uUf5jZb7TjKRZ3tbtHKYUcnTsMDW8/edit?usp=sharing"
-          target="_blank" rel="noopener noreferrer">
-          <span class="btn btn--outline">Resume</span>
-        </a>
+        <span class="btn btn--outline" id='modalBtn'>Resume</span>
 
         <a href="https://github.com/justin-by" aria-label="github" class="link link--icon" target="_blank"
           rel="noopener noreferrer">
@@ -75,6 +72,12 @@
           <i aria-hidden="true" class="fab fa-angellist"></i>
         </a>
 
+      </div>
+    </div>
+
+    <div id='simpleModal' class='modal'>
+      <div class='modal-content' id='modal-content'>
+        <embed id='resume-pdf' src="Justin Sung's Resume.pdf#toolbar=0" type='application/pdf' width='100%' height='100%' />
       </div>
     </div>
 
@@ -164,12 +167,12 @@
         <li class="skills__list-item btn btn--plain">Redux</li>
         <li class="skills__list-item btn btn--plain">Express</li>
         <li class="skills__list-item btn btn--plain">Flask</li>
-        <li class="skills__list-item btn btn--plain">Node.js UI</li>
+        <li class="skills__list-item btn btn--plain">Node.js</li>
         <li class="skills__list-item btn btn--plain">Git</li>
         <li class="skills__list-item btn btn--plain">Docker</li>
         <li class="skills__list-item btn btn--plain">AWS</li>
         <li class="skills__list-item btn btn--plain">SQL / Sequelize</li>
-        <li class="skills__list-item btn btn--plain">postgreSQL</li>
+        <li class="skills__list-item btn btn--plain">PostgreSQL</li>
       </ul>
     </section>
 

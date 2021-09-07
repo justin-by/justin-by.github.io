@@ -53,3 +53,38 @@ const setBtnTheme = () => btnTheme.classList.add(getBtnTheme)
 
 setBodyTheme()
 setBtnTheme()
+
+
+// Modal
+
+const modal = document.getElementById('simpleModal')
+const modalBtn = document.getElementById('modalBtn')
+const resumeParent = document.getElementById('modal-content')
+const pdf = document.getElementById('resume-pdf')
+const newPdf = document.createElement('div')
+newPdf.id = 'pdf-parent'
+newPdf.innerHTML = `<embed id='resume-pdf' src="Justin Sung's Resume.pdf#toolbar=0" type='application/pdf' width='100%' height='100%' />`
+
+
+const openModal = () => {
+	modal.style.display = 'block';
+	pdf.remove();
+	resumeParent.appendChild(newPdf)
+}
+
+const outsideClick = (e) => {
+	if (e.target == modal) {
+		modal.style.display = 'none';
+
+	}
+}
+
+window.addEventListener('click', outsideClick)
+modalBtn.addEventListener('click', openModal);
+
+
+
+
+
+
+
