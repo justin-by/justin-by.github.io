@@ -24,25 +24,55 @@ body {
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+/* Add subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .light {
-  --clr-bg: #fcfcfc;
-  --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
-  --clr-primary: #2978b5;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --clr-bg: #fafbfc;
+  --clr-bg-alt: #ffffff;
+  --clr-fg: #4a5568;
+  --clr-fg-alt: #2d3748;
+  --clr-primary: #667eea;
+  --clr-primary-alt: #764ba2;
+  --clr-secondary: #f093fb;
+  --clr-accent: #4facfe;
+  --shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --shadow-lg: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
 .dark {
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
-  --clr-primary: #90a0d9;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-bg: #0f172a;
+  --clr-bg-alt: #1e293b;
+  --clr-fg: #cbd5e1;
+  --clr-fg-alt: #f1f5f9;
+  --clr-primary: #818cf8;
+  --clr-primary-alt: #a78bfa;
+  --clr-secondary: #f472b6;
+  --clr-accent: #06b6d4;
+  --shadow: rgba(0, 0, 0, 0.25) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -1px;
+  --shadow-lg: rgba(0, 0, 0, 0.3) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -2px;
+  --gradient-primary: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+  --gradient-secondary: linear-gradient(135deg, #f472b6 0%, #fb7185 100%);
+  --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
 }
 
 ::-moz-selection {
@@ -183,10 +213,13 @@ button {
   background-color: var(--clr-bg-alt);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   border: 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .btn--plain:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn--icon {
@@ -213,17 +246,38 @@ button {
 }
 
 .header {
-  height: 8em;
+  height: 6em;
   max-width: 1100px;
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow);
+  padding: 0 2em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+  opacity: 0.95;
+  margin-top: 1em;
+}
+
+.header:hover {
+  opacity: 1;
+  box-shadow: var(--shadow-lg);
 }
 
 main {
   max-width: 1100px;
   width: 95%;
   margin: 0 auto;
+  background-color: var(--clr-bg);
+  padding: 2em 0;
+  border-radius: 20px;
+  margin-top: 1em;
 }
 
 .section {
@@ -252,6 +306,7 @@ main {
 .about {
   flex-direction: column;
   margin-top: 3em;
+  padding: 0 2em;
 }
 
 .about__name {
@@ -286,6 +341,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
   grid-gap: 2em;
+  padding: 0 2em;
 }
 
 .project {
@@ -294,14 +350,81 @@ main {
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  border-radius: 15px;
+  background: var(--clr-bg-alt);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 500px;
 }
 
 .project:hover {
   transform: translateY(-7px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-preview {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.project-preview:empty {
+  display: none;
+}
+
+.project-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project:hover .project-preview img {
+  transform: scale(1.05);
+}
+
+.art-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+  color: white;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.art-placeholder i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+.art-placeholder p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.project:hover .art-placeholder {
+  background: linear-gradient(135deg, #A0522D 0%, #CD853F 100%);
+  transform: scale(1.05);
 }
 
 .project__description {
   margin-top: 1em;
+  flex-grow: 1;
 }
 
 .project__stack {
@@ -320,6 +443,11 @@ main {
 
 .project .link--icon {
   margin-left: 0.5em;
+}
+
+.project__footer {
+  margin-top: auto;
+  padding-top: 1em;
 }
 
 .skills__list {
@@ -354,16 +482,35 @@ main {
 .scroll-top {
   display: none;
   position: fixed;
-  bottom: 1em;
+  bottom: 2em;
   right: 2em;
-  background-color: transparent;
-  font-size: 1.8rem;
-  transition: transform 0.2s ease-in-out;
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--clr-fg-alt);
 }
 
 @media (max-width: 600px) {
   .header {
     height: 6em;
+    padding: 0 1em;
+    border-radius: 15px;
   }
 
   .section {
@@ -377,14 +524,17 @@ main {
     right: 0;
     left: 0;
     top: 5em;
-    background-color: var(--clr-bg);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     width: 0;
     overflow: hidden;
     transition: width 0.2s ease-in-out;
+    border-radius: 15px;
+    margin: 0 1em;
   }
 
   .display-nav-list {
-    width: 100%;
+    width: calc(100% - 2em);
   }
 
   .nav__list-item {
@@ -404,6 +554,13 @@ main {
   .footer {
     padding: 2em;
     margin-top: 3em;
+  }
+
+  .scroll-top {
+    bottom: 1em;
+    right: 1em;
+    width: 45px;
+    height: 45px;
   }
 }
 

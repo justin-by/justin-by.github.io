@@ -46,12 +46,11 @@
     <!-- About -->
     <div class="about center">
       <h1>Hi, I am <span class="about__name">Justin Sung.</span></h1>
-      <h2 class="about__role">A Full-Stack Software Engineer.</h2>
+      <h2 class="about__role">A Software Engineer.</h2>
       <p class="about__desc">
-        I'm a passionate Software Engineer who absolutely loves the innovation and conceptualization required in order
-        to become a great developer.
-        I have experience in building multiple full-stack web applications with JavaScript, Python, React, Flask, and
-        Express.
+        I'm a passionate Software Engineer who thrives on adaptability and creativity in problem-solving. 
+        I believe the best solutions come from thinking outside the box and being flexible with different approaches.
+        I have experience building full-stack applications, machine learning models, and interactive tools using JavaScript, Python, React, Flask, Express, and TensorFlow.
       </p>
 
       <div class="about__contact center">
@@ -77,7 +76,7 @@
 
     <div id='simpleModal' class='modal'>
       <div class='modal-content' id='modal-content'>
-        <embed id='resume-pdf' src="Justin Sung's Resume.pdf#toolbar=0" type='application/pdf' width='100%'
+        <embed id='resume-pdf' src="Justin Sung's Resume.pdf?v=2#toolbar=0" type='application/pdf' width='100%'
           height='100%' />
       </div>
     </div>
@@ -88,28 +87,59 @@
 
       <div class="projects__grid">
         <div class="project">
-          <h3>Anilog</h3>
+          <h3>Latte Art Classifier</h3>
           <div class='project-preview'>
-            <img src='https://i.imgur.com/stMXkN2.png' alt='viper lineups website' width='300' height='150'>
+            <img src='https://i.imgur.com/Cwo98bD.gif' alt='latte art classifier website' width='300' height='150'>
           </div>
           <p class="project__description">
-            A web app for discovering and categorizing anime onto a user’s personalized anime list.
+            A machine learning application that classifies latte art into four categories: heart, tulip, swan, and rosetta. 
+            Built with transfer learning using MobileNetV2 for high accuracy image classification.
           </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Javascript</li>
-            <li class="project__stack-item">Python</li>
-            <li class="project__stack-item">Flask</li>
-            <li class="project__stack-item">React</li>
-          </ul>
+          <div class="project__footer">
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">TensorFlow</li>
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">Flask</li>
+            </ul>
 
-          <a href="https://github.com/justin-by/Anilog" aria-label="source code" class="link link--icon" target="_blank"
-            rel="noopener noreferrer">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://anilog-proj.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
-            rel="noopener noreferrer">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+            <a href="https://github.com/justin-by/latte-art-classifier" aria-label="source code" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a href="https://latte-art-classifier-2.onrender.com/" aria-label="live preview" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="project">
+          <h3>Anilog</h3>
+          <div class='project-preview'>
+            <img src='https://i.imgur.com/stMXkN2.png' alt='anilog website' width='300' height='150'>
+          </div>
+          <p class="project__description">
+            An anime discovery platform that helps users explore, filter, and manage their anime collection. 
+            Built with detailed anime information, user ratings, personalized watchlists, and social features for anime enthusiasts.
+          </p>
+          <div class="project__footer">
+            <ul class="project__stack">
+              <li class="project__stack-item">Javascript</li>
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">Flask</li>
+              <li class="project__stack-item">React</li>
+            </ul>
+
+            <a href="https://github.com/justin-by/Anilog" aria-label="source code" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a href="https://anilog-proj.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
 
         <div class="project">
@@ -118,71 +148,75 @@
             <img src='https://github.com/justin-by/viper-lineups/blob/main/src/images/viper.gif?raw=true' alt='anilog website' width='300' height='150'>
           </div>
           <p class="project__description">
-            An application that displays tested and effective lineups for the Viper agent in the video game Valorant. 
+            A Valorant strategy tool featuring interactive lineup guides for the Viper agent. 
+            Players can explore smoke placements, wall positions, and post-plant strategies with detailed visual guides and map overlays.
           </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Javascript</li>
-            <li class="project__stack-item">React</li>
-          </ul>
+          <div class="project__footer">
+            <ul class="project__stack">
+              <li class="project__stack-item">Javascript</li>
+              <li class="project__stack-item">React</li>
+            </ul>
 
-          <a href="https://github.com/justin-by/viper-lineups" aria-label="source code" class="link link--icon" target="_blank"
-            rel="noopener noreferrer">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="http://www.viperpostplants.com/" aria-label="live preview" class="link link--icon" target="_blank"
-            rel="noopener noreferrer">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+            <a href="https://github.com/justin-by/viper-lineups" aria-label="source code" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a href="http://www.viperpostplants.com/" aria-label="live preview" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
 
         <div class="project">
           <h3>PBrain</h3>
-          <div class='project-preview'>
-          </div>
           <p class="project__description">
-            A programming language-oriented study application that allows users to create and study flashcards within
-            decks; a clone of Brainscape.
+            A flashcard study platform designed specifically for programming languages and technical concepts. 
+            Features spaced repetition algorithms, progress tracking, and collaborative deck sharing to optimize learning retention for developers.
           </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Javascript</li>
-            <li class="project__stack-item">Python</li>
-            <li class="project__stack-item">Flask</li>
-            <li class="project__stack-item">React</li>
-          </ul>
+          <div class="project__footer">
+            <ul class="project__stack">
+              <li class="project__stack-item">Javascript</li>
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">Flask</li>
+              <li class="project__stack-item">React</li>
+            </ul>
 
-          <a href="https://github.com/rzh150030/group_project_2_Brainscape_clone" aria-label="source code"
-            class="link link--icon" target="_blank" rel="noopener noreferrer">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://pbrain-app.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
-            rel="noopener noreferrer">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+            <a href="https://github.com/rzh150030/group_project_2_Brainscape_clone" aria-label="source code"
+              class="link link--icon" target="_blank" rel="noopener noreferrer">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a href="https://pbrain-app.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
 
         <div class="project">
           <h3>Req.Body</h3>
-          <div class='project-preview'>
-          </div>
           <p class="project__description">
-            A personal application for logging workouts to display complete accomplishments and remind of incomplete
-            workouts.
+            A fitness tracking application that helps users maintain consistent workout routines through intelligent logging and progress visualization. 
+            Features workout history, achievement tracking, and personalized reminders to keep users motivated and accountable.
           </p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Javascript</li>
-            <li class="project__stack-item">AJAX</li>
-            <li class="project__stack-item">Express</li>
-          </ul>
+          <div class="project__footer">
+            <ul class="project__stack">
+              <li class="project__stack-item">Javascript</li>
+              <li class="project__stack-item">AJAX</li>
+              <li class="project__stack-item">Express</li>
+            </ul>
 
-          <a href="https://github.com/MattMores/req.body" aria-label="source code" class="link link--icon"
-            target="_blank" rel="noopener noreferrer">
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <a href="https://req-body.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
-            rel="noopener noreferrer">
-            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
-          </a>
+            <a href="https://github.com/MattMores/req.body" aria-label="source code" class="link link--icon"
+              target="_blank" rel="noopener noreferrer">
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a href="https://req-body.herokuapp.com/" aria-label="live preview" class="link link--icon" target="_blank"
+              rel="noopener noreferrer">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -199,6 +233,9 @@
         <li class="skills__list-item btn btn--plain">Express</li>
         <li class="skills__list-item btn btn--plain">Flask</li>
         <li class="skills__list-item btn btn--plain">Node.js</li>
+        <li class="skills__list-item btn btn--plain">TensorFlow</li>
+        <li class="skills__list-item btn btn--plain">Machine Learning</li>
+        <li class="skills__list-item btn btn--plain">AJAX</li>
         <li class="skills__list-item btn btn--plain">Git</li>
         <li class="skills__list-item btn btn--plain">Docker</li>
         <li class="skills__list-item btn btn--plain">AWS</li>

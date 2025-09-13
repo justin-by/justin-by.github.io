@@ -34,13 +34,27 @@ const displayList = () => {
 
 const scrollUp = () => {
 	const btnScrollTop = document.querySelector('.scroll-top');
+	const header = document.querySelector('.header');
+	
 	if (
 		body.scrollTop > 500 ||
 		document.documentElement.scrollTop > 500
 	) {
-		btnScrollTop.style.display = 'block';
+		btnScrollTop.style.display = 'flex';
 	} else {
 		btnScrollTop.style.display = 'none';
+	}
+
+	// Fade header on scroll
+	const scrollY = window.scrollY;
+	const fadeStart = 100;
+	const fadeEnd = 300;
+	
+	if (scrollY > fadeStart) {
+		const opacity = Math.max(0.7, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
+		header.style.opacity = opacity;
+	} else {
+		header.style.opacity = 0.95;
 	}
 };
 
@@ -63,7 +77,7 @@ const resumeParent = document.getElementById('modal-content')
 const pdf = document.getElementById('resume-pdf')
 const newPdf = document.createElement('div')
 newPdf.id = 'pdf-parent'
-newPdf.innerHTML = `<embed id='resume-pdf' src="Justin Sung's Resume.pdf#toolbar=0" type='application/pdf' width='100%' height='100%' />`
+newPdf.innerHTML = `<embed id='resume-pdf' src="Justin Sung's Resume.pdf?v=2#toolbar=0" type='application/pdf' width='100%' height='100%' />`
 
 
 const openModal = () => {
